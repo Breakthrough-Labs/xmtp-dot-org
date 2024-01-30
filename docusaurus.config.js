@@ -72,6 +72,7 @@ const config = {
   ],
 
   plugins: [
+    "@cookbookdev/docusaurus-jsx-runtime-fallback-plugin",
     tailwindPlugin,
     // @ts-ignore
     webpackPlugin,
@@ -398,6 +399,41 @@ const config = {
           },
         ],
         // copyright: `Website CC0 XMTP`,
+      },
+      cookbookDocsBot: {
+        features: {
+          enableExplainSnippet: true,
+        },
+        dataSources: [
+          {
+            name: "XMTP",
+            hostname: "https://xmtp.org",
+          },
+        ],
+        greetingMessage:
+          "Hi! I'm ChefGPT, ask me anything about XMTP!",
+        explainPromptTemplate: "Could you please elaborate on the content within the specified section? The section I'm referring to is:\n```\n$1\n```\n\nI'm seeking a comprehensive explanation to better understand the nuances, procedures, or concepts outlined in this particular segment. Your clarification will greatly assist in grasping the intricacies of the topic at hand.",
+        dialogTitle: "ChefGPT",
+        suggestions: [
+          "What's XMTP?",
+          "How do I integrate XMTP?",
+          "What SDKs are available?",
+        ],
+        messageInputPlaceholder:
+          "Ask anything about XMTP!",
+        ui: {
+          modalContainer: {
+            width: "1000px",
+            height: "800px",
+            shadow: "inset 1px 1px 0 0 #2c2e40, 0 3px 8px 0 #000309",
+            background: "var(--ifm-background-surface-color)",
+          },
+        },
+        apiBaseUrl: "https://simple-web3-api.herokuapp.com",
+        avatars: {
+          ChefGPT: "/img/xmtp-icon.svg",
+          User: "https://cookbook.dev/img/Richard.png",
+        },
       },
       algolia: {
         // The application ID provided by Algolia
