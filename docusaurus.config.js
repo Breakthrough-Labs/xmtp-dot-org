@@ -434,6 +434,8 @@ const config = {
           ChefGPT: "/img/xmtp-icon.svg",
           User: "https://cookbook.dev/img/Richard.png",
         },
+        // It's a public API key, so it's safe to commit it
+        apiKey: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI2NWMxOGRjYzA1MjA1MDZmZmEwMDhjM2UiLCJpYXQiOjE3MDcxODM1NjQsImV4cCI6MjAyMjc1OTU2NH0.psUGXdwbQdwQqRu20MqZK2Z_SHCOU-Ar4kU8zbOyjkg"
       },
       algolia: {
         // The application ID provided by Algolia
